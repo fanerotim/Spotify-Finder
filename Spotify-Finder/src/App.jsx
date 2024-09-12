@@ -9,9 +9,6 @@ function App() {
   const clientID = import.meta.env.VITE_CLIENT_ID;
   const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
 
-  console.log(clientID);
-  console.log(import.meta.env.VITE_CLIENT_SECRET);
-
   return (
     <>
       <div>
