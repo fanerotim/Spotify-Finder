@@ -2,13 +2,14 @@ import './SearchBar.scss'
 
 const SearchBar = () => {
     return (
-        <>
-            <input 
-            type="text" 
-            placeholder='Search artist or album'
-            className="search__input"
+        <div className='search__container'>
+            <h1 className='search__container--logo'>Spotify Finder</h1>
+            <input
+                type="text"
+                placeholder='Search artist or album'
+                className="search__container--input"
             />
-        </>
+        </div>
     )
 }
 
