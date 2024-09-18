@@ -1,7 +1,9 @@
+import { useState } from "react"
+
 const useAuth = () => {
 
-    const getAccessToken = () => {
-        const token = fetch('https://accounts.spotify.com/api/token', {
+    const getAccessToken = async () => {
+        const tokenRequest = await fetch('https://accounts.spotify.com/api/token', {
             method: 'POST',
             body: new URLSearchParams({
                 'grant_type': 'client_credentials'
@@ -11,8 +13,8 @@ const useAuth = () => {
                 'Authorization': 'Basic ' + btoa(import.meta.env.VITE_CLIENT_ID + ':' + import.meta.env.VITE_CLIENT_SECRET)
             }
         })
-
-        return token;
+        const tokenResponse = await tokenRequest.json();
+        return tokenResponse;
     }
 
     return { getAccessToken }
