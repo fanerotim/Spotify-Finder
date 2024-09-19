@@ -2,8 +2,10 @@ import { useState } from "react"
 
 const useAuth = () => {
 
+    const url = import.meta.env.VITE_TOKEN_URL;
+
     const getAccessToken = async () => {
-        const tokenRequest = await fetch('https://accounts.spotify.com/api/token', {
+        const tokenRequest = await fetch(url, {
             method: 'POST',
             body: new URLSearchParams({
                 'grant_type': 'client_credentials'
