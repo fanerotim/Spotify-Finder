@@ -11,14 +11,17 @@ const SearchBar = () => {
     // complete the api call for certain artist/ album 
     useEffect(() => {
         (async () => {
-            const token = await getAccessToken();
-            setToken(() => token.access_token)
-
-            const search = fetch('https://api.spotify.com/v1/search?q=2pac', {
+            const curToken = await getAccessToken();
+            setToken(() => curToken.access_token)
+   
+            const search = await fetch('https://api.spotify.com/v1/search?q=janisjoplin&type=album', {
                 headers: {
-                    Authorization: 'Bearer ' + token.access_token
+                    Authorization: 'Bearer ' + curToken.access_token
                 }
             })
+
+            const searchResult = await search.json();
+            console.log(searchResult)
         })()
     }, [])
 
