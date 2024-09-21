@@ -1,5 +1,6 @@
 
 import './App.css'
+import Card from './components/card/Card';
 import SearchBar from './components/search-bar/SearchBar';
 
 function App() {

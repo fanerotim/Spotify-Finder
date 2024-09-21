@@ -1,21 +1,17 @@
 import './Card.scss'
 
-const Card = () => {
-
-    const cardCount = [1, 1, 1, 1];
-
+const Card = ({albums}) => {
+    console.log(albums)
     return (
         <div className='card__container'>
-            
-            {cardCount.map(card => (
-                <section className='card'>
-                    <img src="" alt="" />
-                    <h1>Album name</h1>
+            {albums.map(album => (
+                <section key={album.id} className='card'>
+                    <img className='card__img' src={album.images[1].url} alt="" />
+                    {/* <h1>{album.name}</h1> */}
                 </section>
             ))}
 
         </div>
-
     )
 }
 

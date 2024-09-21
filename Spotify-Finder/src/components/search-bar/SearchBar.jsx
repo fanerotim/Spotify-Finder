@@ -15,8 +15,6 @@ const SearchBar = () => {
         (async () => {
             const curToken = await getAccessToken();
             setToken(() => curToken.access_token)
-   
-            
         })()
     }, [])
 
@@ -30,14 +28,14 @@ const SearchBar = () => {
         })
 
         const searchResult = await search.json();
-        console.log('search result', searchResult)
-        
+        console.log('cur search result', searchResult)
         if (searchResult.albums.items) {
             setAlbums(prev => searchResult.albums.items)
         }
     }
 
     return (
+        <>
         <div className='search__container'>
             <h1 className='search__container--logo'>Spotify Finder</h1>
             <input
@@ -47,10 +45,9 @@ const SearchBar = () => {
                 value={input}
                 onChange={(e) => handleChange(e)}
             />
-            {albums.length > 0 && albums.map(album => (
-                <Card album={album}/>
-            ))}
         </div>
+            {albums.length > 0 && <Card albums={albums} />}
+        </>
     )
 }
 
