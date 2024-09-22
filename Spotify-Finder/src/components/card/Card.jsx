@@ -1,7 +1,7 @@
 import './Card.scss'
 
 const Card = ({albums}) => {
-    console.log(albums)
+
     return (
         <div className='card__container'>
             {albums.map(album => (
