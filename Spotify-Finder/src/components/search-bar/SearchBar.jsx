@@ -20,19 +20,28 @@ const SearchBar = () => {
 
     const handleChange = async (e) => {
         setInput(() => e.target.value)
+    }
 
+    useEffect(() => {
+        (async (e) => {
+ 
         const search = await fetch(`https://api.spotify.com/v1/search?q=${input}&type=album`, {
             headers: {
                 Authorization: 'Bearer ' + token
             }
         })
 
-        const searchResult = await search.json();
-        console.log('cur search result', searchResult)
+        if (input === '') {
+            setAlbums([])
+        }
+
+        let searchResult = await search.json();
+
         if (searchResult.albums.items) {
             setAlbums(prev => searchResult.albums.items)
         }
-    }
+        })()
+    }, [input])
 
     return (
         <>
