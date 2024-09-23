@@ -2,17 +2,49 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: .5rem;
+    gap: 1rem;
     padding: 5rem;
 }
 
-.card {
-    width: 200px;
-    height: 300px;
+.card__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+    width: 200px;
+    
+    border-radius: .2rem;
+    outline: 1px solid black;
+
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: transform .1s;
+    }   
+}
+
+.image__wrapper {
+
+    width: 200px;
+    height: 260px;
+    
     &__img {
         width: 100%;
         height: 100%;
+        border-radius: .2rem;
         object-fit: cover;
+    }
+}
+
+.text__wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        font-size: 1.2rem;
+        font-weight: 300;
     }
 }

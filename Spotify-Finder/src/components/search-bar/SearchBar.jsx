@@ -8,7 +8,7 @@ const SearchBar = () => {
 
     // set access token
     const [token, setToken] = useState(null)
-    
+
     // import function that calls Spotify API to request access token
     const { getAccessToken } = useFetchToken();
 
@@ -26,27 +26,29 @@ const SearchBar = () => {
         })()
     }, [])
 
-    const {search} = useFetchSearch();
+    const { search } = useFetchSearch();
 
     const handleChange = async (e) => {
         // TODO: When search field is cleaned quickly last result is displayed. Check why this happens and resolve
         let emptyInput = e.target.value;
         setInput(prev => e.target.value);
-        
+
         if (emptyInput === '') {
-            setAlbums(prev => [])
+            setAlbums([])
+            console.log('boom bap')
+            console.log(albums);
             return;
         }
-        
+
         const url = `https://api.spotify.com/v1/search?q=${input}&type=album`;
-        
+
         try {
             const result = await search(url, token);
 
             if (result.albums.items) {
                 setAlbums(prev => result.albums.items)
             }
-        } catch(err) {
+        } catch (err) {
             console.log(err, 'boom')
         }
     }

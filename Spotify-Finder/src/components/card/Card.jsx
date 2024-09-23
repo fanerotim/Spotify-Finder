@@ -1,14 +1,19 @@
 import './Card.scss'
 
-const Card = ({albums}) => {
+const Card = ({ albums }) => {
 
     return (
         <div className='card__container'>
             {albums.map(album => (
-                <section key={album.id} className='card'>
-                    <img className='card__img' src={album.images[1].url} alt="" />
-                    {/* <h1>{album.name}</h1> */}
-                </section>
+                <div className='card__wrapper'>
+                    <section key={album.id} className='image__wrapper'>
+                        <img className='image__wrapper__img' src={album.images[1].url} alt="" />
+                    </section>
+
+                    <section className='text__wrapper'>
+                        <h1 className='text__wrapper__text'>{album.name}</h1>
+                    </section>
+                </div>
             ))}
 
         </div>
