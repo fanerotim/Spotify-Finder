@@ -10,13 +10,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     width: 200px;
-    
     border-radius: .2rem;
-    outline: 1px solid black;
-
     cursor: pointer;
+    background-color: rgb(245, 245, 245);
 
     &:hover {
         transform: scale(1.05);
