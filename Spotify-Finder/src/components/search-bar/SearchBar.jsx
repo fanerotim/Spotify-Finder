@@ -29,17 +29,8 @@ const SearchBar = () => {
     const { search } = useFetchSearch();
 
     const handleChange = async (e) => {
-        // TODO: When search field is cleaned quickly last result is displayed. Check why this happens and resolve
-        let emptyInput = e.target.value;
         setInput(prev => e.target.value);
-
-        if (emptyInput === '') {
-            setAlbums([])
-            console.log('boom bap')
-            console.log(albums);
-            return;
-        }
-
+        
         const url = `https://api.spotify.com/v1/search?q=${input}&type=album`;
 
         try {
@@ -65,7 +56,7 @@ const SearchBar = () => {
                     onChange={(e) => handleChange(e)}
                 />
             </div>
-            {albums.length > 0 && <Card albums={albums} />}
+            {input !== '' && <Card albums={albums} />}
         </>
     )
 }
