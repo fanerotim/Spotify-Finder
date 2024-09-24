@@ -29,6 +29,7 @@ const SearchBar = () => {
     const { search } = useFetchSearch();
 
     const handleChange = async (e) => {
+        
         setInput(prev => e.target.value);
         
         const url = `https://api.spotify.com/v1/search?q=${input}&type=album`;

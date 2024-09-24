@@ -11,6 +11,7 @@ const Card = ({ albums }) => {
                     </section>
 
                     <section className='text__wrapper'>
+                        <p className='text__wrapper__label'>Album</p>
                         <h1 className='text__wrapper__text'>{album.name}</h1>
                     </section>
                 </div>
