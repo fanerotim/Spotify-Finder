@@ -29,11 +29,15 @@ const SearchBar = () => {
     const { search } = useFetchSearch();
 
     const handleChange = async (e) => {
-        
-        setInput(prev => e.target.value);
-        
-        const url = `https://api.spotify.com/v1/search?q=${input}&type=album`;
 
+        setInput(prev => e.target.value);
+
+        const url = `https://api.spotify.com/v1/search?q=${input}&type=album&limit=50`;
+
+        if (input === '') {
+            return
+        }
+   
         try {
             const result = await search(url, token);
 
@@ -41,7 +45,7 @@ const SearchBar = () => {
                 setAlbums(prev => result.albums.items)
             }
         } catch (err) {
-            console.log(err, 'boom')
+            console.log(err)
         }
     }
 
