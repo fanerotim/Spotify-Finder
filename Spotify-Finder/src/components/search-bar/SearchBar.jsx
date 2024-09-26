@@ -53,6 +53,9 @@ const SearchBar = () => {
         <>
             <div className='search__container'>
                 <h1 className='search__container--logo'>Spotify Finder</h1>
+                <h2 className='search__container--description'>
+                Search for any album by name or artist. Just enter your query in the search box, and we'll bring up the best matches from Spotify!
+                </h2>
                 <input
                     type="text"
                     placeholder='Search artist or album'
