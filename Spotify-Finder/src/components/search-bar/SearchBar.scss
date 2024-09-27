@@ -10,10 +10,12 @@
     gap: 2rem;
 
     &--logo {
-        margin-left: 1rem;
-        margin-right: 1rem;
+        // margin-left: 1rem;
+        // margin-right: 1rem;
+        text-align: center;
         font-size: 6rem;
         font-weight: 700;
+        color: rgb(43, 39, 39, .85);
     }
 
     &--description {
@@ -21,6 +23,7 @@
         text-align: center;
         font-weight: 300;
         font-size: 1.1rem;
+        color: rgb(56, 47, 47, .8);
     }
 
     &--input {
@@ -28,7 +31,7 @@
         padding: 1.2rem .5rem;
         height: 2rem;
         width: 70vw;
-        background-color: rgb(241, 241, 241);
+        background-color: rgba(57, 176, 255, 0.2);
         border-radius: .5rem;
         border: none;
         flex-grow: 1;
@@ -37,5 +40,11 @@
             outline: none;
         }
 
+    }
+}
+
+@media(max-width: 680px) {
+    .search__container--logo {
+        line-height: 1.2;
     }
 }
