@@ -10,12 +10,14 @@
     gap: 2rem;
 
     &--logo {
-        // margin-left: 1rem;
-        // margin-right: 1rem;
         text-align: center;
         font-size: 6rem;
         font-weight: 700;
         color: rgb(43, 39, 39, .85);
+
+        &--span {
+            color: rgb(230, 74, 74);
+        }
     }
 
     &--description {
@@ -28,16 +30,20 @@
 
     &--input {
         align-self: center;
-        padding: 1.2rem .5rem;
+        padding: 1.4rem .5rem;
         height: 2rem;
         width: 70vw;
-        background-color: rgba(57, 176, 255, 0.2);
+        background-color: rgba(228, 221, 221, 0.2);
+        color: rgb(32, 30, 30);
+        font-size: .9rem;
+        font-weight: 400;
         border-radius: .5rem;
         border: none;
         flex-grow: 1;
 
         &:focus {
-            outline: none;
+            outline: 1px solid rgb(149, 207, 255);
+            background-color: rgb(248, 244, 244);
         }
 
     }
