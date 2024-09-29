@@ -28,11 +28,16 @@
         color: rgb(56, 47, 47, .8);
     }
 
+    &__input__container {
+        display: flex;
+        width: 70vw;
+    }
+
     &--input {
         align-self: center;
-        padding: 1.4rem .5rem;
+        padding: 1.6rem .5rem;
         height: 2rem;
-        width: 70vw;
+        width: 60vw;
         background-color: rgba(228, 221, 221, 0.2);
         color: rgb(32, 30, 30);
         font-size: .9rem;
@@ -40,12 +45,19 @@
         border-radius: .5rem;
         border: none;
         flex-grow: 1;
+        padding-left: 2.5rem;
+
+        position: relative;
+
+        &--icon {
+            padding-left: .5rem;
+            position: absolute;
+            align-self: center;
+        }
 
         &:focus {
             outline: 1px solid rgb(149, 207, 255);
-            background-color: rgb(248, 244, 244);
         }
-
     }
 }
 

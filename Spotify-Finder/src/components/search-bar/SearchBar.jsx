@@ -37,7 +37,7 @@ const SearchBar = () => {
         if (input === '') {
             return
         }
-   
+
         try {
             const result = await search(url, token);
 
@@ -52,17 +52,21 @@ const SearchBar = () => {
     return (
         <>
             <div className='search__container'>
-                <h1 className='search__container--logo'>Spotify Finder</h1>
+                <h1 className='search__container--logo'>Spotify <span className='search__container--logo--span'>Finder</span></h1>
                 <h2 className='search__container--description'>
-                Search for any album by name or artist. Just enter your query in the search box, and we'll bring up the best matches from Spotify!
+                    Search for any album by name or artist. Just enter your query in the search box, and we'll bring up the best matches from Spotify!
                 </h2>
-                <input
-                    type="text"
-                    placeholder='Search artist or album'
-                    className="search__container--input"
-                    value={input}
-                    onChange={(e) => handleChange(e)}
-                />
+
+                <form className='search__container__input__container'>
+                    <span className="material-symbols-outlined search__container--input--icon">search</span>
+                    <input
+                        type="text"
+                        placeholder='Search artist or album'
+                        className="search__container--input"
+                        value={input}
+                        onChange={(e) => handleChange(e)}
+                    />
+                </form>
             </div>
             {input !== '' && <Card albums={albums} />}
         </>
