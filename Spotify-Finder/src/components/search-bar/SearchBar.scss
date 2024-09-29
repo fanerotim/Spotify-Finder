@@ -6,14 +6,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1rem;
     gap: 2rem;
 
     &--logo {
+        margin-top: 3rem;
+        padding: 3rem;
         text-align: center;
         font-size: 6rem;
         font-weight: 700;
         color: rgb(43, 39, 39, .85);
+        line-height: 1.2;
 
         &--span {
             color: rgb(230, 74, 74);
@@ -39,6 +41,7 @@
         height: 2rem;
         width: 60vw;
         background-color: rgba(228, 221, 221, 0.2);
+        background-color: rgba(138, 208, 255, 0.4);
         color: rgb(32, 30, 30);
         font-size: .9rem;
         font-weight: 400;
@@ -50,19 +53,16 @@
         position: relative;
 
         &--icon {
-            padding-left: .5rem;
             position: absolute;
             align-self: center;
+            padding-left: .5rem;
+            color: rgb(59, 57, 57);
+            z-index: 99;
         }
 
         &:focus {
-            outline: 1px solid rgb(149, 207, 255);
+            outline: none;
+            background-color: rgb(210, 237, 255);
         }
-    }
-}
-
-@media(max-width: 680px) {
-    .search__container--logo {
-        line-height: 1.2;
     }
 }

@@ -61,7 +61,7 @@ const SearchBar = () => {
                     <span className="material-symbols-outlined search__container--input--icon">search</span>
                     <input
                         type="text"
-                        placeholder='Search artist or album'
+                        placeholder='Search artist or album...'
                         className="search__container--input"
                         value={input}
                         onChange={(e) => handleChange(e)}

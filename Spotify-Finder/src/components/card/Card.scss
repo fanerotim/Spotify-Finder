@@ -11,12 +11,12 @@
     flex-direction: column;
     justify-content: space-between;
     border-radius: .2rem;
-    box-shadow: .2rem .2rem .5rem rgb(230, 230, 230);
+    box-shadow: .4rem .4rem 1rem rgb(65, 65, 65, .7);
 
     margin-bottom: 1rem;
     cursor: pointer;
 
-    background-color: rgb(255, 252, 252);
+    background-color: rgb(255, 255, 255);
     
     &:hover {
         transform: scale(1.05);
