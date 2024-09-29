@@ -23,6 +23,8 @@ const SearchBar = () => {
         (async () => {
             const curToken = await getAccessToken();
             setToken(() => curToken.access_token)
+            // set access token to local storage
+            localStorage.setItem('access_token', curToken.access_token)
         })()
     }, [])
 
@@ -68,7 +70,7 @@ const SearchBar = () => {
                     />
                 </form>
             </div>
-            {input !== '' && <Card albums={albums} />}
+            {input !== '' && <Card albums={albums} token={token} />}
         </>
     )
 }

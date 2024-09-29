@@ -2,8 +2,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
     gap: 1rem;
-    padding: 5rem;
+    
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 3rem;
 }
 
 .card__wrapper {
