@@ -1,8 +1,8 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import './AlbumDetails.scss';
 
 const AlbumDetails = () => {
-
     const { albumId } = useParams();
 
     const url = `https://api.spotify.com/v1/albums/${albumId}/tracks`
@@ -21,15 +21,17 @@ const AlbumDetails = () => {
             setTracks(prev => albumTracks.items)
         })()
     }, [])
-
+    
+    console.log(tracks)
 
 
     return (
         <>
-            <h1>Hello, please see the tracks in this album below:</h1>
-            <ul>
-            {tracks.length > 0 && tracks.map(track => (
-                <li>{track.name}</li>
+            <Link to='/' className="back__button">Back to homepage</Link>
+            <h1 className="track__list__container__heading">Tracklist:</h1>
+            <ul className="track__list__container">
+            {tracks.length > 0 && tracks.map((track, index) => (
+                <li className="track__list--item">{index + 1}. {track.name}</li>
             ))}
             </ul>
         </>
