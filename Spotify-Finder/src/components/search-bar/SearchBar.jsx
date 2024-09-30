@@ -70,7 +70,7 @@ const SearchBar = () => {
                     />
                 </form>
             </div>
-            {input !== '' && <Card albums={albums} token={token} />}
+            {input !== '' && <Card albums={albums}/>}
         </>
     )
 }
