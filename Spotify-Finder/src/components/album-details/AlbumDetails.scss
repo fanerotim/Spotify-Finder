@@ -27,11 +27,20 @@
     all: unset;
     cursor: pointer;
     display: block;
-    background-color: rgb(243, 235, 235);
-    margin-left: 3rem;
-    margin-top: 2rem;
     padding: .5rem .7rem;
     border-radius: .4rem;
     width: fit-content;
 
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+    box-shadow: .1rem .1rem 1rem rgb(202, 198, 198);
+
+    &:hover {
+        transition: background-color .5s;
+        background-color: rgb(221, 212, 212);
+    }
 }

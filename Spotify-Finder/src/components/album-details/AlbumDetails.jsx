@@ -21,13 +21,11 @@ const AlbumDetails = () => {
             setTracks(prev => albumTracks.items)
         })()
     }, [])
-    
-    console.log(tracks)
 
 
     return (
-        <>
-            <Link to='/' className="back__button">Back to homepage</Link>
+        <>  
+            <Link to='/' className="back__button"><span className="material-symbols-outlined">arrow_back</span>Back to homepage</Link>
             <h1 className="track__list__container__heading">Tracklist:</h1>
             <ul className="track__list__container">
             {tracks.length > 0 && tracks.map((track, index) => (
