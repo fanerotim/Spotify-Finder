@@ -48,3 +48,14 @@
         background-color: rgb(223, 223, 223);
     }
 }
+
+.album__details {
+    margin-top: 2rem;
+    border: 1px solid red;
+    padding: 2rem;
+
+    &__label {
+        font-size: .9rem;
+        color: grey;
+    }
+}
