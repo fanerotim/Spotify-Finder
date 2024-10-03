@@ -7,7 +7,7 @@ const Card = ({ albums }) => {
         <div className='card__container'>
             {albums.map(album => (
                 <div className='card__wrapper' key={album.id}>
-                    <Link className='card__wrapper__link' to={`albums/${album.id}`}>
+                    <Link className='card__wrapper__link' to={`albums/${album.id}`} state={album}>
                         <section className='image__wrapper'>
                             <img className='image__wrapper__img' src={album.images[1].url} alt="" />
                         </section>
