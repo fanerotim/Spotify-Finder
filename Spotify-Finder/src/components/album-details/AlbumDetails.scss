@@ -1,6 +1,7 @@
 .details__container {
     padding: 2rem;
-    background-color: rgb(238, 238, 238);
+    // background-color: rgb(238, 238, 238);
+    // background-color: rgb(185, 185, 185);
 }
 
 .track__list__container {
@@ -50,12 +51,32 @@
 }
 
 .album__details {
-    margin-top: 2rem;
-    border: 1px solid red;
+    margin-top: 4rem;
+    border-radius: .5rem;
+
     padding: 2rem;
 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     &__label {
-        font-size: .9rem;
-        color: grey;
+        display: block;
+        width: fit-content;
+        padding: .2rem .8rem;
+        border-radius: .4rem;
+        background-color: rgb(247, 240, 240);
+        outline: 1px solid rgb(248, 187, 187, .3);;
+        font-size: .8rem;
+        font-weight: 300;
+        margin-top: 1.5rem;
+    }
+
+    &__text {
+        margin-top: .3rem;
+        color: rgb(3, 32, 49);
+        font-size: 1.15rem;
+        font-weight: 400;
     }
 }

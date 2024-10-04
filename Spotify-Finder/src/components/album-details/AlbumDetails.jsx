@@ -32,12 +32,12 @@ const AlbumDetails = () => {
 
     return (
         <div className="details__container">
-            <Link to='/' className="back__button"><span className="material-symbols-outlined">arrow_back</span>Back to homepage</Link>
+            <Link to='/' className="back__button"><span className="material-symbols-outlined">arrow_back</span>Home</Link>
             <div className="album__details">
-                <span className="album__details__label">Album name: </span><p>{state.name}</p>
-                <span className="album__details__label">Release date: </span><p>{state.release_date}</p>
-                <span className="album__details__label">Total tracks: </span><p>{state.total_tracks}</p>
-                <span className="album__details__label">Artists: </span><p>{state.artists[0].name}</p>
+                <span className="album__details__label">Album name: </span><p className="album__details__text">{state.name}</p>
+                <span className="album__details__label">Release date: </span><p className="album__details__text">{state.release_date}</p>
+                <span className="album__details__label">Total tracks: </span><p className="album__details__text">{state.total_tracks}</p>
+                <span className="album__details__label">Artists: </span><p className="album__details__text">{state.artists[0].name}</p>
             </div>
             <h1 className="track__list__container__heading">Tracklist:</h1>
             <ul className="track__list__container">
