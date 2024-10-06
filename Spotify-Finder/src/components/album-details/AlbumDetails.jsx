@@ -30,19 +30,20 @@ const AlbumDetails = () => {
         })()
     }, [])
 
+
     return (
         <div className="details__container">
             <Link to='/' className="back__button"><span className="material-symbols-outlined">arrow_back</span>Home</Link>
             <div className="album__details">
-                <span className="album__details__label">Album name: </span><p className="album__details__text">{state.name}</p>
-                <span className="album__details__label">Release date: </span><p className="album__details__text">{state.release_date}</p>
-                <span className="album__details__label">Total tracks: </span><p className="album__details__text">{state.total_tracks}</p>
-                <span className="album__details__label">Artists: </span><p className="album__details__text">{state.artists[0].name}</p>
+                <span className="album__details__label">Album name </span><p className="album__details__text">{state.name}</p>
+                <span className="album__details__label">Release date </span><p className="album__details__text">{state.release_date}</p>
+                <span className="album__details__label">Total tracks </span><p className="album__details__text">{state.total_tracks}</p>
+                <span className="album__details__label">Artists </span><p className="album__details__text">{state.artists[0].name}</p>
             </div>
-            <h1 className="track__list__container__heading">Tracklist:</h1>
+            <h1 className="track__list__container__heading">Tracklist</h1>
             <ul className="track__list__container">
                 {tracks.length > 0 && tracks.map((track, index) => (
-                    <li key={track.id} className="track__list--item">{index + 1}. {track.name}</li>
+                    <li key={track.id} className="track__list--item"><span className="track__list--item--number">{index + 1}.</span> <span className='track__list--item--name'>{track.name}</span></li>
                 ))}
             </ul>
         </div>
