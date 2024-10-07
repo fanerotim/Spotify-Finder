@@ -6,7 +6,6 @@ const AlbumDetails = () => {
     const { albumId } = useParams();
 
     let { state } = useLocation();
-    console.log(state);
 
     const url = `https://api.spotify.com/v1/albums/${albumId}/tracks`
     const token = localStorage.getItem('access_token');
@@ -14,7 +13,13 @@ const AlbumDetails = () => {
     const [tracks, setTracks] = useState([]);
 
     useEffect(() => {
+
+        
+
         (async () => {
+
+            // make sure each time page is rendered to its top 
+            window.scrollTo(0, 0)
 
             try {
                 const albumTracksReq = await fetch(url, {
