@@ -1,5 +1,5 @@
 The Spotify-Finder project is a small app that uses Spotify's API and allows users to search through Spotify's library. 
-Users can search for artists or albums. Once the application renders the result of the search, users can also navigate to details page, where the app renders information regarding the album such as: album name, release date, artist name and also tracklist of the album.  
+Users can search for albums by album or artist/band name. Once the application renders the result of the search, users can click on any of the albums to navigate to its details page. On details page the app gives information such as: album name, release date, total tracks, artist name and also there is a section with the tracklist of the album.  
 
 The app is deployed and can be accessed via this link:
 https://spotify-finder.fanerotim.com
