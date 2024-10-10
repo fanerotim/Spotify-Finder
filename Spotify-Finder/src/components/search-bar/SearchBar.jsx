@@ -70,7 +70,9 @@ const SearchBar = () => {
                     />
                 </form>
             </div>
-            {input !== '' && <Card albums={albums}/>}
+            {input !== '' 
+            ? <Card albums={albums}/>
+            : <h1 className='no__match__text'>Nothing popped up! Let’s search again and find your jam.</h1>}
         </>
     )
 }
