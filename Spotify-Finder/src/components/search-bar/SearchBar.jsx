@@ -42,7 +42,7 @@ const SearchBar = () => {
 
         try {
             const result = await search(url, token);
-
+            console.log(result)
             if (result.albums.items) {
                 setAlbums(prev => result.albums.items)
             }
